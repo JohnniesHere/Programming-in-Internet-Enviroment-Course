@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans</title>
+    <link rel="stylesheet" href="PricePlans.css">
+</head>
+<body>
+    <input type="checkbox" id="theme-toggle" class="theme-toggle-input">
+    <label for="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        <span class="light-text">Dark mode</span>
+        <span class="dark-text">Light mode</span>
+    </label>
+
+    <div class="page-wrapper">
+        <main class="pricing-container">
+            <section class="header">
+                <h1>Choose the Plan that Fits Your Team</h1>
+                <p>Deploy your sites in seconds</p>
+                
+                <div class="search-container">
+                    <input type="text" placeholder="Search for plan" class="search-input">
+                </div>
+            </section>
+
+            <section class="plans-container">
+                <!-- Dev Plan -->
+                <article class="plan-card">
+                    <div class="plan-header">
+                        <h2>Dev</h2>
+                        <div class="price">
+                            <span class="amount">FREE</span>
+                        </div>
+                    </div>
+                    
+                    <ul class="features-list">
+                        <li class="available">Unlimited websites</li>
+                        <li class="available">1 User</li>
+                        <li class="available">100mb space per website</li>
+                        <li class="available">Continuous deployment</li>
+                        <li class="unavailable">No priority support</li>
+                    </ul>
+                    
+                    <button class="signup-btn">Sign Up</button>
+                </article>
+
+                <!-- Pro Plan -->
+                <article class="plan-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="plan-header">
+                        <h2>Pro</h2>
+                        <div class="price">
+                            <span class="amount">$10</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    
+                    <ul class="features-list">
+                        <li class="available">Unlimited Websites</li>
+                        <li class="available">5 Users</li>
+                        <li class="available">512MB Space/website</li>
+                        <li class="available">Continuous deployment</li>
+                        <li class="available">Email Support</li>
+                    </ul>
+                    
+                    <button class="signup-btn primary">Buy Now</button>
+                </article>
+
+                <!-- Enterprise Plan -->
+                <article class="plan-card">
+                    <div class="plan-header">
+                        <h2>Enterprise</h2>
+                        <div class="price">
+                            <span class="amount">Custom Pricing</span>
+                        </div>
+                    </div>
+                    
+                    <ul class="features-list">
+                        <li class="available">Unlimited Websites</li>
+                        <li class="available">Unlimited Users</li>
+                        <li class="available">Unlimited Space/website</li>
+                        <li class="available">Continuous deployment</li>
+                        <li class="available">24/7 Email support</li>
+                    </ul>
+                    
+                    <button class="signup-btn">Contact Us</button>
+                </article>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
