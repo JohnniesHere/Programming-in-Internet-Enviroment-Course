@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Machine | Historical Events Explorer</title>
+    <link rel="stylesheet" href="PastEvents.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+<div class="app-container">
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <i class="fas fa-clock-rotate-left"></i>
+            <span>Time Machine</span>
+        </div>
+        <h1 id="current-date" class="current-date"></h1>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Search Card -->
+        <div class="search-card">
+            <div class="search-controls">
+                <div class="date-input-wrapper">
+                    <input type="text" id="date-input" value="dd/mm">
+                    <div class="date-input-icon">
+                        <i class="far fa-calendar-alt"></i>
+                    </div>
+                </div>
+                <div class="buttons-wrapper">
+                    <button id="specific-date-btn" class="btn primary-btn">
+                        <i class="fas fa-search"></i>
+                        <span>Specific date in the past</span>
+                    </button>
+                    <button id="today-past-btn" class="btn secondary-btn">
+                        <i class="fas fa-history"></i>
+                        <span>Today in the past</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Error Message -->
+            <div id="error-message" class="error-message hidden">
+                <i class="fas fa-exclamation-circle"></i>
+                <span></span>
+            </div>
+        </div>
+
+        <!-- Results Card -->
+        <div class="results-card">
+            <div class="results-header">
+                <i class="fas fa-scroll"></i>
+                <h2>Historical Event</h2>
+            </div>
+            <div id="results" class="results-content">
+                <div class="placeholder-text">
+                    <i class="fas fa-hourglass-start"></i>
+                    <p>Enter a date to discover historical events</p>
+                </div>
+            </div>
+            <div class="loading-spinner hidden">
+                <div class="spinner"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Powered by History Muffin Labs API</p>
+    </footer>
+</div>
+<script src="PastEvents.js"></script>
+</body>
+</html>

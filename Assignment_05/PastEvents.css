@@ -1,0 +1,308 @@
+/* Modern CSS Reset and Variables */
+:root {
+    --twitch-dark: #0e0e10;
+    --twitch-dark-secondary: #18181b;
+    --twitch-dark-tertiary: #1f1f23;
+    --twitch-purple: #9147ff;
+    --twitch-purple-hover: #772ce8;
+    --twitch-purple-light: #bf94ff;
+    --text-color: #efeff1;
+    --text-color-secondary: #adadb8;
+    --error-red: #ff4040;
+    --error-bg: rgba(255, 64, 64, 0.1);
+    --success-green: #00ff95;
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--twitch-dark);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Layout */
+.app-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: var(--twitch-purple-light);
+}
+
+.logo i {
+    font-size: 1.75rem;
+}
+
+.current-date {
+    font-size: 1.25rem;
+    color: var(--text-color-secondary);
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Search Card */
+.search-card {
+    background-color: var(--twitch-dark-secondary);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: var(--card-shadow);
+}
+
+.search-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Date Input Styling */
+.date-input-wrapper {
+    position: relative;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.date-input-wrapper input {
+    width: 100%;
+    padding: 1rem;
+    padding-left: 3rem;
+    background-color: var(--twitch-dark-tertiary);
+    border: 2px solid transparent;
+    border-radius: 0.5rem;
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: all var(--transition-speed);
+}
+
+.date-input-wrapper input:focus {
+    outline: none;
+    border-color: var(--twitch-purple);
+    box-shadow: 0 0 0 2px rgba(145, 71, 255, 0.2);
+}
+
+.date-input-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-color-secondary);
+}
+
+/* Buttons */
+.buttons-wrapper {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all var(--transition-speed);
+}
+
+.primary-btn {
+    background-color: var(--twitch-purple);
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: var(--twitch-purple-hover);
+    transform: translateY(-1px);
+}
+
+.secondary-btn {
+    background-color: var(--twitch-dark-tertiary);
+    color: var(--text-color);
+}
+
+.secondary-btn:hover {
+    background-color: var(--twitch-dark);
+    transform: translateY(-1px);
+}
+
+/* Results Card */
+.results-card {
+    background-color: var(--twitch-dark-secondary);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: var(--card-shadow);
+    position: relative;
+    min-height: 200px;
+}
+
+.results-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    color: var(--twitch-purple-light);
+}
+
+.results-header h2 {
+    font-size: 1.25rem;
+}
+
+.results-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Placeholder */
+.placeholder-text {
+    text-align: center;
+    color: var(--text-color-secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.placeholder-text i {
+    font-size: 2rem;
+    opacity: 0.5;
+}
+
+/* Error Message */
+.error-message {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--error-red);
+    background-color: var(--error-bg);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    animation: slideDown 0.3s ease-out;
+}
+
+.error-message.hidden {
+    display: none;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(24, 24, 27, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.loading-spinner.hidden {
+    display: none;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid var(--twitch-dark-tertiary);
+    border-top-color: var(--twitch-purple);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    color: var(--text-color-secondary);
+    font-size: 0.875rem;
+    padding: 1rem 0;
+}
+
+/* Animations */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+    .app-container {
+        padding: 1rem;
+    }
+
+    .search-card,
+    .results-card {
+        padding: 1.5rem;
+    }
+
+    .buttons-wrapper {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Fade In Animation for Results */
+.results-content {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
