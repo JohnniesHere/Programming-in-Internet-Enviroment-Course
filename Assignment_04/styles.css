@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #0E0E10;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.game-container {
+    width: fit-content;
+    padding: 20px;
+}
+
+.game-controls {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 620px;
+}
+
+#newGameBtn {
+    background-color: #9147FF;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#newGameBtn:hover {
+    background-color: #772CE8;
+}
+
+.game-info {
+    font-size: 16px;
+    color: #EFEFF1;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(5, 120px);
+    grid-template-rows: repeat(6, 120px);
+    gap: 4px;
+    background-color: #18181B;
+    padding: 4px;
+    border-radius: 8px;
+}
+
+.card {
+    width: 120px;
+    height: 120px;
+    background-color: #3F51B5;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(0.98);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    display: none;
+    object-fit: fill;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 8px;
+}
+
+.card.flipped {
+    background-color: #18181B;
+}
+
+.card.flipped img {
+    display: block;
+}
+
+.game-over {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #18181B;
+    color: #EFEFF1;
+    padding: 20px 40px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    border: 1px solid #9147FF; 
+    z-index: 1000;
+}
