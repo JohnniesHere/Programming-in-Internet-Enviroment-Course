@@ -1,0 +1,188 @@
+:root {
+    --dark-bg: #0e0e10;
+    --darker-bg: #18181b;
+    --purple: #9147ff;
+    --light: #efeff1;
+    --gray: #1f1f23;
+    --light-gray: #35353a;
+    --like-green: #00f593;
+    --error-red: #ff0000;
+    --border-color: rgba(145, 71, 255, 0.4);
+}
+
+/* Base body styles */
+body {
+    background-color: var(--dark-bg);
+    color: var(--light);
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    width: 900px;
+    margin: 0 auto;  /* Center the content */
+}
+
+/* Common section styles */
+section {
+    background-color: var(--darker-bg);
+    border: 1px solid var(--border-color);
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Title section */
+#title {
+    text-align: center;
+    font-size: 28px;
+    padding: 25px;
+    background: linear-gradient(to right, var(--darker-bg), var(--gray));
+}
+
+/* Flex container for image and text */
+.content-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+/* Image container styles */
+.content-wrapper section:first-child {
+    flex: 0 0 350px;
+    padding: 10px;
+    height: auto;
+}
+
+/* Text container styles with scrolling */
+.content-wrapper section:last-child {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Image styling */
+#chuck-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 6px;
+    display: block;
+}
+
+/* Custom scrollbar styling */
+.content-wrapper section::-webkit-scrollbar {
+    width: 6px;
+}
+
+.content-wrapper section::-webkit-scrollbar-track {
+    background: var(--darker-bg);
+}
+
+.content-wrapper section::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 3px;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 0 0;
+}
+
+/* Table header styling */
+th {
+    background-color: var(--purple);
+    color: var(--light);
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+}
+
+/* Rounded corners for table headers */
+th:first-child { border-top-left-radius: 6px; }
+th:last-child { border-top-right-radius: 6px; }
+
+/* Zebra striping for table rows */
+tr:nth-child(odd) { background-color: var(--light-gray); }
+tr:nth-child(even) { background-color: var(--darker-bg); }
+
+/* Table cell styling */
+td {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Filter section layout */
+.filter-section {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+/* Input field styling */
+input[type="text"] {
+    background-color: var(--gray);
+    border: 1px solid var(--border-color);
+    color: var(--light);
+    padding: 10px 15px;
+    border-radius: 6px;
+    width: 200px;
+    font-size: 14px;
+}
+
+/* Input focus state */
+input[type="text"]:focus {
+    outline: none;
+    border-color: var(--purple);
+}
+
+/* Button styling */
+button {
+    background-color: var(--purple);
+    color: var(--light);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+/* Disabled button state */
+button:disabled {
+    background-color: var(--gray);
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Button hover state */
+button:hover:not(:disabled) {
+    background-color: #7a3dd0;
+}
+
+/* Joke container styling */
+#joke-container {
+    min-height: 100px;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Button container layout */
+.buttons-container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Error message styling */
+.error-message {
+    color: var(--error-red);
+    margin-left: 10px;
+    font-size: 14px;
+}

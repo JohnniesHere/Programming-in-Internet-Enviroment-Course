@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic meta tags for character encoding and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuck Norris Homepage</title>
+    <link rel="stylesheet" href="MainPage.css">
+</head>
+<body onload="initializePage()">
+    <!-- A: Header section -->
+    <section id="title">
+        <h1>Jonathan Elgarisi - 315428326</h1>
+    </section>
+
+    <div class="content-wrapper">
+        <!-- C: Image section - displays random Chuck Norris image -->
+        <section>
+            <img id="chuck-image" alt="Random Chuck Norris image" src="/api/placeholder/">
+        </section>
+
+        <!-- B: Biography section with scrollable text -->
+        <section>
+            <p>Chuck Norris is an American martial artist, actor, film producer, and screenwriter who became a global action star.
+                After serving in the United States Air Force, he won many martial arts championships and later founded his own discipline Chun Kuk Do.
+                Norris is a black belt in Tang Soo Do, Brazilian jiu jitsu and Judo, and won numerous karate championships throughout the 1960s.
+                He appeared in a number of action films, such as Way of the Dragon alongside Bruce Lee, Missing in Action, and The Delta Force.
+                He gained widespread fame playing the leading role in the television series Walker, Texas Ranger from 1993 to 2001,
+                which ran for eight successful seasons. Beyond his entertainment career,
+                Norris has dedicated much of his life to martial arts education and has helped create multiple charitable organizations,
+                including Kickstart Kids, which teaches martial arts to middle school students to promote discipline and respect.
+                He has also authored several books and become a popular internet culture icon,
+                known for humorous "Chuck Norris facts" that exaggerate his toughness and abilities.</p>
+        </section>
+    </div>
+
+    <!-- D: Movie information table section -->
+    <section>
+        <table id="movies-table">
+            <thead>
+                <tr>
+                    <th>Movie Title</th>
+                    <th>Year</th>
+                    <th>Role</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+
+    <!-- E: Year filter section for movies -->
+    <section class="filter-section">
+        <label for="year-filter"></label>
+        <input type="text" id="year-filter" placeholder="Enter year (e.g., 1984)">
+        <button onclick="filterMovies()">Filter</button>
+        <span id="error-message" class="error-message"></span>
+    </section>
+
+    <!-- F: Container for Chuck Norris jokes -->
+    <section id="joke-container"></section>
+
+    <!-- G: Interactive buttons for joke management -->
+    <section class="buttons-container">
+        <button onclick="getJoke()">Get</button>
+        <button onclick="likeJoke()" id="like-btn" disabled>Like</button>
+        <button onclick="dislikeJoke()" id="dislike-btn" disabled>Dislike</button>
+        <button onclick="clearJoke()" id="clear-btn" disabled>Clear</button>
+    </section>
+
+    <!-- JavaScript file imports -->
+    <script src="ChuckMovies.js"></script>
+    <script src="MainPage.js"></script>
+</body>
+</html>
